@@ -23,5 +23,4 @@ jobs:
           passphrase: ${{ secrets.PHRASE }}
           port: 22
           script: |
-            whoami
-            pwd
+            ls
