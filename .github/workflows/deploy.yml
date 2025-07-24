@@ -1,13 +1,8 @@
-name: Push-to-EC2 instance
-
-on:
-  push:
-    branches:
-      - main
-
+name: Remote SSH Command
+on: [push]
 jobs:
-  deploy:
-    name: Push to EC2
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
