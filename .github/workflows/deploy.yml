@@ -24,4 +24,5 @@ jobs:
           port: 22
           script: |
             cd /home/ubuntu/test
-              ./deploy.sh
+            chmod +x deploy.sh
+            ./deploy.sh
