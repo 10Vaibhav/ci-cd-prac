@@ -22,4 +22,6 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           passphrase: ${{ secrets.PHRASE }}
           port: 22
-          script: ./deploy.sh
+          script: |
+            cd /home/ubuntu/test
+              ./deploy.sh
