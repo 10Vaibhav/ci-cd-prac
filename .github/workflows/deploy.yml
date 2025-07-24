@@ -1,24 +1,20 @@
 name: Push-to-EC2 instance
-
-on:
-  push:
-    branches:
-      - main
-
+on: [push]:
+      branches:
+        - main
 jobs:
   deploy:
-    name: Push to EC2
+    name: push to EC2
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Execute remote SSH commands using SSH key
         uses: appleboy/ssh-action@v1
         with:
           host: 13.233.103.237
           username: ubuntu
-          key: ${{ secrets.NEW_PASS}}
+          key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: whoami
+          script: whoami  
