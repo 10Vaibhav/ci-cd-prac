@@ -17,11 +17,11 @@ jobs:
       - name: Execute remote SSH commands using SSH key
         uses: appleboy/ssh-action@v1.0.3  # Specify version
         with:
-          host: ${{ secrets.EC2_HOST }}
+          host: 13.233.103.237
           username: ubuntu
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           passphrase: ${{ secrets.PHRASE }}
-          port: ${{ secrets.EC2_PORT }}
+          port: 22
           script: |
             cd /home/ubuntu/test
             chmod +x deploy.sh
